@@ -14,7 +14,8 @@ kubectl port-forward svc/argocd-server 8080:443 -n argocd
 argocd admin initial-password -n argocd
 
 #apply the configuration
-
+kubectl apply -f application.yaml
+kubectl edit deployment -n myapp myapp
 
 ```
 </br>
